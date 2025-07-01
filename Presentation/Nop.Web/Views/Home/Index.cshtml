@@ -6,6 +6,10 @@
 @{
     Layout = "_ColumnsOne";
 
+    //NopHtml.AddCssFileParts("~/Themes/DefaultClean/Content/css/iomnieye-custom-styles.css");
+    // Or, if you prefer to add it directly in _Head.cshtml or another central place:
+    // Ensure iomnieye-custom-styles.css is created and contains the necessary styles.
+
     var homepageTitle = await localizationService.GetLocalizedAsync(await storeContext.GetCurrentStoreAsync(), s => s.HomepageTitle);
 
     //title
@@ -25,7 +29,30 @@
     //page class
     NopHtml.AppendPageCssClassParts("html-home-page");
 }
-<div class="page home-page">
+
+<section id="iomnieye-banner" class="iomnieye-banner-section">
+    <video autoplay loop muted playsinline poster="@Url.Content("~/resource/baner3.jpg")" id="iomnieyeBannerVideo" class="iomnieye-banner-video">
+        <source src="@Url.Content("~/resource/banner_video.mp4")" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="iomnieye-banner-text-container">
+        <div class="iomnieye-banner-text-overlay">
+            <h2 id="iomnieye-banner-title">Ваши IT, наш опыт</h2>
+            <p id="iomnieye-banner-subtitle">Доверьте OmniEye внедрение надежных и инновационных IT-решений.</p>
+            <div class="iomnieye-tag-cloud">
+                <span>IT Consulting</span>
+                <span>IT Outsource</span>
+                <span>Web Development & App Development</span>
+                <span>IP Telephony</span>
+                <span>СКС Видео Наблюдение</span>
+                <span>Network & Servers</span>
+                <span>Optimization System</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="page home-page iomnieye-content-wrapper">
     <div class="page-body">
         @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageTop })
         @await Component.InvokeAsync(typeof(TopicBlockViewComponent), new { systemName = "HomepageText" })

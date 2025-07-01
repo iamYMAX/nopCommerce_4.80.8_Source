@@ -1,0 +1,251 @@
+/* iOmniEye Custom Styles for NopCommerce */
+
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', 'Inter', 'Roboto', sans-serif;
+    /* Video background for the entire page */
+    /* The video tag itself will handle the display. We ensure body allows it to be visible. */
+    background-color: #000; /* Fallback if video fails or for areas not covered */
+    color: #fff; /* Default text color for content outside specific dark overlay blocks */
+    position: relative; /* Needed for z-indexing of content over video */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Video Banner Section */
+.iomnieye-banner-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide parts of video that might overflow */
+    z-index: 1; /* Base layer */
+}
+
+.iomnieye-banner-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100; /* Behind all other banner content */
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    object-fit: cover; /* Cover the area, cropping as needed */
+}
+
+.iomnieye-banner-text-container {
+    position: relative; /* To be on top of the video */
+    z-index: 2; /* Above video, below main site header if it overlaps */
+    text-align: center;
+    padding: 20px; /* Some padding */
+}
+
+.iomnieye-banner-text-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    padding: 2rem;
+    border-radius: 8px;
+    display: inline-block; /* Fit content */
+    max-width: 90%; /* Ensure it doesn't get too wide */
+}
+
+#iomnieye-banner-title {
+    font-size: 3.5rem; /* From iOmniEye #banner-text */
+    color: #FFFFFF;
+    font-weight: 300;   /* From iOmniEye #banner-text */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+#iomnieye-banner-subtitle {
+    font-size: 2rem; /* From iOmniEye #banner-subtext */
+    color: #FFFFFF;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.iomnieye-tag-cloud {
+    margin-top: 20px;
+}
+
+.iomnieye-tag-cloud span {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Match overlay for consistency */
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    margin: 5px;
+    font-size: 0.9rem;
+}
+
+.iomnieye-tag-cloud span:hover {
+    transform: scale(1.1);
+    background-color: rgba(128, 0, 0, 0.6); /* Dark red from iOmniEye */
+}
+
+/* NopCommerce Content Wrapper - to place it above the video background */
+.iomnieye-content-wrapper {
+    position: relative;
+    z-index: 10; /* Ensure NopCommerce content is above the banner video if it's a global background */
+                 /* If banner is only for the top, this might not be needed or adjusted */
+    background-color: transparent; /* Make default page background transparent if body has video */
+                                 /* Or set a semi-transparent background for all content blocks */
+}
+
+/* Styling for NopCommerce widgets/blocks on the homepage */
+/* This makes all direct children .widget, .category-grid, .product-grid etc. have the overlay style */
+.home-page .page-body > * {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: #fff; /* White text */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem; /* Space between blocks */
+    border-radius: 8px;
+}
+
+/* Titles inside these blocks */
+.home-page .page-body > * .title,
+.home-page .page-body > * h2,
+.home-page .page-body > * .product-name,
+.home-page .page-body > * .news-title,
+.home-page .page-body > * .poll-display-text {
+    color: #fff !important; /* Ensure titles are white */
+}
+
+/* Text content inside these blocks */
+.home-page .page-body > * p,
+.home-page .page-body > * .product-item .description,
+.home-page .page-body > * .news-item .news-body,
+.home-page .page-body > * .poll-options li label {
+    color: #f0f0f0 !important; /* Slightly off-white for general text */
+}
+
+/* Links inside these blocks */
+.home-page .page-body > * a {
+    color: #87cefa !important; /* LightSkyBlue for links, or choose another light color */
+}
+.home-page .page-body > * a:hover {
+    color: #add8e6 !important; /* LightBlue for hover */
+}
+
+/* Prices */
+.home-page .page-body > * .product-item .prices .actual-price {
+    color: #ffd700 !important; /* Gold for prices, for example */
+    font-weight: bold;
+}
+
+/* Buttons inside these blocks */
+.home-page .page-body > * .buttons input[type="button"],
+.home-page .page-body > * .buttons button,
+.home-page .page-body > * .poll-vote-button {
+    background-color: #800000 !important; /* Dark red from iOmniEye hover */
+    color: #fff !important;
+    border: 1px solid #a00000 !important;
+}
+.home-page .page-body > * .buttons input[type="button"]:hover,
+.home-page .page-body > * .buttons button:hover,
+.home-page .page-body > * .poll-vote-button:hover {
+    background-color: #a00000 !important;
+}
+
+/* Specific NopCommerce elements that might need overrides */
+.master-wrapper-page {
+    background-color: transparent; /* If body has the video background */
+}
+
+.header, .footer {
+    position: relative;
+    z-index: 20; /* Ensure header and footer are above content and banner */
+    background-color: rgba(0,0,0,0.7) !important; /* Darker overlay for header/footer */
+}
+.header-logo a img{
+    filter: brightness(0) invert(1); /* If logo is dark, make it white */
+}
+
+/* Remove background from individual widgets if .page-body > * handles it */
+.home-page .topic-block,
+.home-page .category-grid,
+.home-page .product-grid,
+.home-page .best-sellers,
+.home-page .news-list-hp,
+.home-page .poll {
+    background-color: transparent !important; /* Override their specific backgrounds */
+    border: none !important; /* Remove individual borders if any */
+    box-shadow: none !important; /* Remove individual shadows if any */
+    padding: 0 !important; /* Padding is handled by the parent rule */
+    margin-bottom: 0 !important; /* Margin is handled by the parent rule */
+}
+
+/* Ensure the main page content area doesn't have its own opaque background */
+.page.home-page {
+    background-color: transparent !important;
+}
+
+/* If the layout forces a white background on .center-1 or .center-2, override it */
+.center-1, .center-2 {
+    background-color: transparent !important;
+}
+
+/* Adjust margin for the first content block after the banner */
+.iomnieye-content-wrapper {
+    padding-top: 50px; /* Or enough space so it doesn't overlap with fixed header or banner elements */
+}
+
+/* Ensure full width for banner and content on homepage */
+.html-home-page .master-wrapper-content .page {
+    padding: 0; /* Remove default page padding if it constrains width */
+}
+
+.html-home-page .master-wrapper-content {
+     max-width: 100%; /* Allow full width */
+}
+
+/* Responsive adjustments for banner text */
+@media (max-width: 768px) {
+    #iomnieye-banner-title {
+        font-size: 2.5rem;
+    }
+    #iomnieye-banner-subtitle {
+        font-size: 1.5rem;
+    }
+    .iomnieye-banner-text-overlay {
+        padding: 1.5rem;
+    }
+    .iomnieye-tag-cloud span {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    #iomnieye-banner-title {
+        font-size: 2rem;
+    }
+    #iomnieye-banner-subtitle {
+        font-size: 1.2rem;
+    }
+    .iomnieye-banner-text-overlay {
+        padding: 1rem;
+    }
+}
+
+/* Ensure the NopCommerce content starts below the banner or has appropriate spacing */
+.page.home-page {
+    /* If banner is not position:fixed, content will naturally flow after it.
+       If banner is fixed or absolute and takes up the whole screen,
+       content might need a margin-top: 100vh or similar,
+       or the banner itself should only be for the background of the first section. */
+    /* For now, assuming banner is the first section, and normal flow applies for subsequent .iomnieye-content-wrapper */
+}
+
+/* If you added NopHtml.AddCssFileParts in Index.cshtml, this file will be loaded.
+   Alternatively, you can import this file into the main styles.css of the theme.
+   Example for styles.css: @import url("iomnieye-custom-styles.css"); */

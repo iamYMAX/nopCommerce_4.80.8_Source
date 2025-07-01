@@ -60,6 +60,7 @@
     @await Html.PartialAsync("Head")
 
     @NopHtml.GenerateCssFiles()
+    <link rel="stylesheet" href="~/Themes/DefaultClean/Content/css/iomnieye-custom-styles.css" />
 
     @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HeadHtmlTag })
     @NopHtml.GenerateCanonicalUrls()
