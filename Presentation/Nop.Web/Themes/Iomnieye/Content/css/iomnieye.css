@@ -1,0 +1,1064 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem white;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url('../images/baner3.jpg'); /* Path updated for NopCommerce theme structure */
+    background-size: cover;
+    background-attachment: fixed; /* \xc7\xe0\xea\xf0\xe5\xef\xeb\xe5\xed\xe8\xe5 \xf4\xee\xed\xe0 \xef\xf0\xe8 \xef\xf0\xeee\xea\xf0\xf3\xf2\xea\xe5 */
+    overflow: hidden; /* Prevent scrollbars due to animation */
+    background-position: center center; /* \xd6\xe5\xed\xf2\xf0\xe8\xf0\xee\xe2\xe0\xed\xe8\xe5 \xe8\xe7\xee\xe1\xf0\xe0\xe6\xe5\xed\xe8\xff */
+}
+
+.social-links a {
+    margin: 0 5px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+}
+.mt-8 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.social-links a:hover svg path {
+    fill: #007bff; /* \xd6\xe2\xe5\xf2 \xef\xf0\xe8 \xed\xe0\xe2\xe5\xe4\xe5\xed\xe8\xe8 */
+}
+
+.social-links svg {
+    width: 100%;
+    height: 100%;
+}
+.social-links a {
+
+}
+.main-text {
+    font-size: 32px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.changing-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+.language-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.language-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4); /* Transparent background */
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+    .language-button:hover {
+        background-color: rgba(128, 0, 0, 0.6); /* Blue color on hover */
+        background-color: rgba(128, 0, 0, 0.6); /* Blue border on hover */
+    }
+
+#container {
+    max-width: 50px;
+}
+.display-4 {
+    color: white;
+
+}
+.text-3xl {
+    color: white;
+
+}
+
+.content{ margin-top:15px;}
+
+
+.tag-cloud {
+    text-align: center;
+    color: white;
+    margin-top:2%;
+
+}
+.cashtag {
+    color: rgba(0, 0, 0, 0);
+    font-size:50px;
+}
+.border-top {
+    margin-bottom:20px;
+}
+
+    .tag-cloud span {
+        display: inline-block; /* \xdd\xeb\xe5\xec\xe5\xed\xf2\xfb \xe1\xf3\xe4\xf3\xf2 \xe2 \xf1\xf2\xf0\xeee\xea\xe5, \xed\xee \xf1\xee\xf5\xf0\xe0\xed\xff\xfe\xf2 \xe1\xeb\xee\xf7\xed\xf3\xfe \xf1\xf2\xf0\xf3\xea\xf2\xf3\xf0\xf3 */
+        padding: 5px 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.2s, background-color 0.2s;
+        margin: 3px; /* \xce\xf2\xf1\xf2\xf3\xef \xec\xe5\xe6\xe4\xf3 \xfd\xeb\xe5\xec\xe5\xed\xf2\xe0\xec\xe8 */
+    }
+
+        .tag-cloud span:hover {
+            transform: scale(1.1);
+            background-color: rgba(128, 0, 0, 0.6);
+        }
+
+/* \xc1\xe0\xe7\xee\xe2\xfb\xe9 \xf0\xe0\xe7\xec\xe5\xf0 \xe4\xeb\xff \xe7\xe0\xe3\xee\xeb\xee\xe2\xea\xe0 */
+.display-4 {
+    font-size: 3.5rem; /* \xd0\xe0\xe7\xec\xe5\xf0 \xef\xee \xf3\xec\xee\xeb\xf7\xe0\xed\xe8\xfe \xe4\xeb\xff \xe1\xee\xeb\xfc\xf8\xe8\xf5 \xfd\xea\xf0\xe0\xed\xee\xe2 */
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin: 20px 0;
+}
+@media (max-width: 1920px) {
+    .display-4 {
+        font-size: 4.5rem; /* \xd3\xec\xe5\xed\xfc\xf8\xe0\xe5\xec \xf0\xe0\xe7\xec\xe5\xf0 \xf8\xf0\xe8\xf4\xf2\xe0 */
+    }
+}
+/* \xc0\xe4\xe0\xef\xf2\xe0\xf6\xe8\xff \xe4\xeb\xff \xf1\xf0\xe5\xe4\xed\xe8\xf5 \xfd\xea\xf0\xe0\xed\xee\xe2 (\xef\xeb\xe0\xed\xf8\xe5\xf2\xfb) */
+@media (max-width: 992px) {
+    .display-4 {
+        font-size: 2.5rem; /* \xd3\xec\xe5\xed\xfc\xf8\xe0\xe5\xec \xf0\xe0\xe7\xec\xe5\xf0 \xf8\xf0\xe8\xf4\xf2\xe0 */
+    }
+}
+
+/* \xc0\xe4\xe0\xef\xf2\xe0\xf6\xe8\xff \xe4\xeb\xff \xec\xe0\xeb\xe5\xed\xfc\xea\xe8\xf5 \xfd\xea\xf0\xe0\xed\xee\xe2 (\xec\xee\xe1\xe8\xeb\xfc\xed\xfb\xe5 \xf3\xf1\xf2\xf0\xee\xe9\xf1\xf2\xe2\xe0) */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem; /* \xc5\xf9\xe5 \xec\xe5\xed\xfc\xf8\xe5 \xf0\xe0\xe7\xec\xe5\xf0 \xf8\xf0\xe8\xf4\xf2\xe0 */
+    }
+}
+
+/* \xc0\xe4\xe0\xef\xf2\xe0\xf6\xe8\xff \xe4\xeb\xff \xee\xf7\xe5\xed\xfc \xec\xe0\xeb\xe5\xed\xfc\xea\xe8\xf5 \xfd\xea\xf0\xe0\xed\xee\xe2 */
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 1.5rem; /* \xcc\xe8\xed\xe8\xec\xe0\xeb\xfc\xed\xfb\xe9 \xf0\xe0\xe7\xec\xe5\xf0 \xf8\xf0\xe8\xf4\xf2\xe0 */
+    }
+}
+
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+}
+
+.tooltip-popup {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    z-index: 100;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tooltip-wrapper.show-tooltip .tooltip-popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Optional: triangle */
+.tooltip-popup::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #dc3545 transparent;
+}
+
+.form-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-color: #333;
+}
+
+    .form-control::placeholder {
+        color: #bbb;
+    }
+
+label {
+    font-size: 1em;
+    color: white;
+}
+
+.form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.fixed-button.vertical-text {
+    position: fixed;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%) rotate(180deg);
+    writing-mode: vertical-rl;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    z-index: 1000;
+}
+@media (max-width: 768px) {
+    .form {
+        padding: 0 1rem;
+    }
+
+    .form-control {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+
+    label {
+        font-size: 1.4rem;
+        background-color:rgba(0,0,128,0.5)
+    }
+    .tooltip-wrapper {
+        width: 100%;
+    }
+
+
+}
+/* \xce\xe1\xb8\xf0\xf2\xea\xe0 \xe4\xeb\xff \xea\xf0\xf3\xe3\xe0 \xe8 \xf2\xe5\xea\xf1\xf2\xe0 */
+.pulse-wrapper {
+    position: relative;
+    width: 80px; /* \xf0\xe5\xe3\xf3\xeb\xe8\xf0\xf3\xe9 \xef\xee\xe4 \xf2\xe5\xea\xf1\xf2 */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* \xcf\xf3\xeb\xfc\xf1\xe8\xf0\xf3\xfe\xf9\xe8\xe9 \xf4\xee\xed */
+.pulse-circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: red;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+    z-index: 0;
+}
+
+/* \xd2\xe5\xea\xf1\xf2 \xef\xee\xe2\xe5\xf0\xf5 \xea\xf0\xf3\xe3\xe0 */
+.pulse-text {
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    z-index: 1;
+    animation: textPulse 1.5s infinite;
+    transform: rotate(45deg); /* \xc7\xe0\xec\xe5\xed\xe8\xf2\xe5 \xf3\xe3\xee\xeb \xed\xe0 \xed\xf3\xe6\xed\xfb\xe9 */
+}
+/* \xc0\xed\xe8\xec\xe0\xf6\xe8\xff \xf2\xe5\xea\xf1\xf2\xe0 \x97 \xec\xe5\xed\xff\xe5\xf2 \xf6\xe2\xe5\xf2 */
+@keyframes textPulse {
+    0% {
+        color: black;
+    }
+
+    50% {
+        color: white;
+        transform: rotate(90deg); /* \xc7\xe0\xec\xe5\xed\xe8\xf2\xe5 \xf3\xe3\xee\xeb \xed\xe0 \xed\xf3\xe6\xed\xfb\xe9 */
+    }
+
+    100% {
+        color: black;
+    }
+}
+/* \xc0\xed\xe8\xec\xe0\xf6\xe8\xff \xef\xf3\xeb\xfc\xf1\xe0\xf6\xe8\xe8 */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+
+/* \xcf\xe0\xed\xe5\xeb\xfc \x97 \xe0\xe1\xf1\xee\xeb\xfe\xf2\xed\xe0\xff \xee\xf2\xed\xee\xf1\xe8\xf2\xe5\xeb\xfc\xed\xee \xee\xea\xed\xe0, \xf1\xef\xf0\xe0\xe2\xe0 \xee\xf2 \xea\xed\xee\xef\xea\xe8 */
+.popup-panel {
+    position: fixed;
+    top: 50%;
+    left: auto; /* \xf8\xe8\xf0\xe8\xed\xe0 \xea\xed\xee\xef\xea\xe8 + \xee\xf2\xf1\xf2\xf3\xef */
+    right: 48px;
+    transform: translateY(-50%);
+    /*background: white;border-radius: 0 6px 6px 0;border: 1px solid #ccc;*/
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.icon-link svg {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+    transition: color 0.3s;
+}
+
+.icon-link:hover {
+    color: #0077ff;
+}
+
+
+
+
+.back-to-home {
+    position: fixed;
+    top: 50%;
+    left: -80px; /* \xf1\xef\xf0\xff\xf2\xe0\xed\xee \xed\xe0\xef\xee\xeb\xee\xe2\xe8\xed\xf3 */
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: left 0.4s ease;
+    z-index: 9999;
+}
+
+    .back-to-home:hover {
+        left: 0;
+    }
+
+.back-circle {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    position: relative;
+    animation: backPulse 2s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    transition: background 0.3s;
+    overflow: visible;
+}
+
+.back-to-home:hover .back-circle {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.back-label {
+    margin-left: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    font-size: 30px;
+}
+
+.back-to-home:hover .back-label {
+    opacity: 1;
+}
+
+/* \xcf\xf3\xeb\xfc\xf1\xe0\xf6\xe8\xff \xea\xf0\xf3\xe3\xe0 */
+@keyframes backPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
+    }
+
+    70% {
+        box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+/* \xd1\xf2\xf0\xe5\xeb\xea\xe8 - \xe2\xf0\xe0\xf9\xe5\xed\xe8\xe5 \xe2\xee\xea\xf0\xf3\xe3 \xf6\xe5\xed\xf2\xf0\xe0 \xea\xf0\xf3\xe3\xe0 \xef\xee \xe4\xf3\xe3\xe5 */
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 82px;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transform-origin: center center; /* \xf6\xe5\xed\xf2\xf0 \xe2\xf0\xe0\xf9\xe5\xed\xe8\xff \x97 \xf6\xe5\xed\xf2\xf0 \xea\xf0\xf3\xe3\xe0 + \xf0\xe0\xe4\xe8\xf3\xf1 \xe2\xed\xe8\xe7 */
+    animation-timing-function: linear;
+}
+
+/* \xca\xe0\xe6\xe4\xe0\xff \xf1\xf2\xf0\xe5\xeb\xea\xe0 \xf1\xee \xf1\xe2\xee\xe5\xe9 \xe7\xe0\xe4\xe5\xf0\xe6\xea\xee\xe9 */
+.a1 {
+    animation: rotateArrow 2.4s linear infinite;
+    animation-delay: 0s;
+}
+
+.a2 {
+    animation: rotateArrow 2.4s linear infinite;
+    animation-delay: 0.8s;
+}
+
+.a3 {
+    animation: rotateArrow 2.4s linear infinite;
+    animation-delay: 1.6s;
+}
+
+/* \xc0\xed\xe8\xec\xe0\xf6\xe8\xff \xe2\xf0\xe0\xf9\xe5\xed\xe8\xff \xe8 \xef\xf3\xeb\xfc\xf1\xe0\xf6\xe8\xff \xef\xf0\xee\xe7\xf0\xe0\xf7\xed\xee\xf1\xf2\xe8 */
+@keyframes rotateArrow {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+.popup-message {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    font-size: 16px;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+    .popup-message.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+@media (max-width: 768px) {
+
+
+    .back-to-home {
+        position: fixed;
+        top: 93%;
+        left: -80px; /* \xf1\xef\xf0\xff\xf2\xe0\xed\xee \xed\xe0\xef\xee\xeb\xee\xe2\xe8\xed\xf3 */
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: left 0.4s ease;
+        z-index: 9999;
+    }
+
+}
+
+/* NopCommerce Header Styling for Iomnieye Theme */
+.header {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333; /* Darker border */
+}
+
+.header-logo a img {
+    /* Assuming the logo might need to be white/light to show on dark background */
+    /* filter: brightness(0) invert(1); /* This can make a dark logo white - adjust as needed */
+    max-height: 50px; /* Adjust as needed */
+}
+
+.header-links a,
+.header-links span,
+#topcartlink a,
+.header-selectors-wrapper .language-selector .name,
+.header-selectors-wrapper .currency-selector .name {
+    color: #fff; /* White text for links */
+    text-transform: none; /* iOmniEYE doesn't seem to use uppercase extensively */
+}
+
+.header-links a:hover,
+#topcartlink a:hover,
+.header-selectors-wrapper .language-selector .name:hover,
+.header-selectors-wrapper .currency-selector .name:hover {
+    color: #007bff; /* Blue hover from iOmniEYE social links */
+}
+
+#topcartlink .cart-qty {
+    color: #fff;
+    background-color: #007bff; /* Blue background for cart quantity */
+}
+
+.search-box .search-box-text {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+    border: 1px solid #555;
+    color: #fff;
+}
+
+.search-box .search-box-text::placeholder {
+    color: #ccc;
+}
+
+.search-box .search-box-button {
+    background-color: rgba(128, 0, 0, 0.6); /* Maroon from iOmniEYE language button hover */
+    color: #fff;
+    border: 1px solid rgba(128, 0, 0, 0.8);
+}
+
+.search-box .search-box-button:hover {
+    background-color: rgba(128, 0, 0, 0.8);
+}
+
+/* Main Menu (Top Menu) Styling */
+.header-menu {
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly more transparent */
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    margin-top: 10px;
+}
+
+.header-menu > ul > li > a,
+.header-menu > ul > li > span {
+    color: #fff;
+    font-size: 1em; /* Adjust as needed */
+    text-transform: none;
+}
+
+.header-menu > ul > li > a:hover,
+.header-menu > ul > li > span:hover {
+    color: #007bff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header-menu .sublist {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker dropdown */
+    border: 1px solid #333;
+}
+
+.header-menu .sublist li a {
+    color: #eee;
+}
+
+.header-menu .sublist li a:hover {
+    color: #007bff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* NopCommerce Footer Styling for Iomnieye Theme */
+.iomnieye-footer .footer-upper {
+    background-color: #1f2937; /* bg-gray-800 */
+    color: #fff; /* Assuming text should be light on dark background */
+    padding-top: 4rem; /* py-16 */
+    padding-bottom: 4rem; /* py-16 */
+    text-align: center;
+}
+
+.iomnieye-footer .footer-upper h2 { /* Corresponds to text-3xl font-bold */
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: #fff; /* Ensure title is white */
+}
+
+.iomnieye-footer .social-links { /* Corresponds to social-links mt-7 */
+    margin-top: 1.75rem;
+}
+
+/* Styling for NopCommerce's SocialButtonsViewComponent to match iOmniEYE's inline SVGs */
+.iomnieye-footer .social-buttons-list li {
+    display: inline-block;
+    margin: 0 5px; /* From iOmniEYE .social-links a */
+}
+
+.iomnieye-footer .social-buttons-list a {
+    display: inline-block;
+    width: 40px; /* From iOmniEYE .social-links a */
+    height: 40px; /* From iOmniEYE .social-links a */
+    /* Assuming Nop uses <i> tags or similar with classes for icons, not direct SVGs like iOmniEYE */
+    /* We'll need to style these icons to be white and change on hover */
+    color: #fff; /* Default icon color */
+    font-size: 24px; /* From iOmniEYE .social-links a */
+    line-height: 40px; /* Center icon if it's a font icon */
+    text-align: center;
+    border-radius: 50%; /* Optional: if icons should be in circles */
+    background-color: rgba(255,255,255,0.1); /* Slight background for visibility */
+}
+
+.iomnieye-footer .social-buttons-list a:hover {
+    color: #007bff; /* Blue hover from iOmniEYE */
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Styling for the .footer-lower part */
+.iomnieye-footer .footer-lower {
+    background-color: #111827; /* Darker gray, e.g., gray-900 */
+    color: #9ca3af; /* Lighter gray text, e.g., gray-400 */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.iomnieye-footer .footer-lower a {
+    color: #60a5fa; /* Light blue for links, e.g., blue-400 */
+}
+
+.iomnieye-footer .footer-lower a:hover {
+    color: #2563eb; /* Darker blue on hover, e.g., blue-600 */
+}
+
+/* Hide default NopCommerce footer columns if a very minimalist footer is desired */
+/*
+.iomnieye-footer .footer-block.information,
+.iomnieye-footer .footer-block.customer-service,
+.iomnieye-footer .footer-block.my-account,
+.iomnieye-footer .footer-block.follow-us .title:not(h2),
+.iomnieye-footer .footer-block.follow-us .newsletter-box {
+    display: none;
+}
+*/
+
+/* General Page Styling for Iomnieye Theme */
+body {
+    color: #ccc; /* Default light text color for body */
+    font-family: Arial, Helvetica, sans-serif; /* Fallback font, ensure this matches iOmniEYE if specified elsewhere */
+}
+
+.page {
+    /* background-color: rgba(0, 0, 0, 0.3); /* Optional: slightly darker overlay for page content area if needed */
+    /* padding: 20px; */ /* Add padding if required */
+}
+
+.page-title h1, .page-title h2 {
+    color: #fff;
+    /* text-align: center; /* From iOmniEYE display-4 */
+    /* background-color: rgba(0, 0, 0, 0.4); /* From iOmniEYE display-4 */
+    /* padding: 10px; */
+    /* border-bottom: 1px solid #555; */ /* Darker border */
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fff; /* Light color for all headings */
+}
+
+a {
+    color: #60a5fa; /* Light blue for links, similar to footer */
+}
+
+a:hover, a:focus {
+    color: #2563eb; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Table Styling */
+.table-wrapper table th {
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    border-color: #444;
+}
+.table-wrapper table td {
+    border-color: #444;
+    color: #ccc;
+}
+.cart th, .data-table th, .forum-table th { /* from DefaultClean, adapting for dark */
+    border-color: #444;
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+}
+.cart td, .data-table td, .forum-table td {
+    border-color: #333;
+    background-color: rgba(255,255,255,0.05); /* Very subtle light background for table cells */
+    color: #ccc;
+}
+
+
+/* Button Styling */
+.button-1, /* Primary buttons */
+.button-2.product-box-add-to-cart-button, /* Add to cart in grid/list */
+.button-1.search-box-button, /* Search button already styled, but ensure consistency */
+.button-1.overview-buttons .add-to-cart-button /* Add to cart on product page */
+ {
+    padding: 10px 20px; /* Adjusted from language-button */
+    font-size: 1em; /* Adjusted from language-button */
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid white;
+    border-radius: 8px; /* From iOmniEYE language-button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-transform: none;
+}
+
+.button-1:hover,
+.button-2.product-box-add-to-cart-button:hover,
+.button-1.search-box-button:hover, /* Already styled, but ensure consistency */
+.button-1.overview-buttons .add-to-cart-button:hover {
+    background-color: rgba(128, 0, 0, 0.6); /* Maroon hover */
+    border-color: rgba(128, 0, 0, 0.8);
+    color: #fff;
+}
+
+.button-2, /* Secondary buttons */
+.button-2.wishlist-add-to-cart-button,
+.button-2.email-a-friend-button,
+.button-2.compare-products-button {
+    padding: 8px 18px;
+    font-size: 0.9em;
+    color: #ccc;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #555;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-transform: none;
+}
+
+.button-2:hover,
+.button-2.wishlist-add-to-cart-button:hover,
+.button-2.email-a-friend-button:hover,
+.button-2.compare-products-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #777;
+    color: #fff;
+}
+
+
+/* Form Input Styling */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="search"], /* NopCommerce uses type="search" for search box */
+.form-control, /* Bootstrap class used by Nop */
+select,
+textarea {
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Important to override Nop/Bootstrap defaults */
+    color: white !important;
+    border: 1px solid #333 !important;
+    border-radius: 4px; /* Softer radius */
+    padding: .375rem .75rem; /* Bootstrap default padding */
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="search"]::placeholder,
+.form-control::placeholder,
+textarea::placeholder {
+    color: #bbb !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+.form-control:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff !important; /* Blue focus border */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important; /* Blue focus shadow */
+}
+
+select {
+    /* Appearance might be needed to override browser defaults for select on dark bg */
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
+    /* appearance: none; */
+    /* background-image: url('path_to_dark_dropdown_arrow.svg'); */ /* Needs a custom arrow for dark bg */
+    /* background-repeat: no-repeat; */
+    /* background-position: right .75rem center; */
+}
+
+/* Checkboxes and Radios - basic theming for dark background */
+input[type="checkbox"],
+input[type="radio"] {
+    /* May need more specific styling if they look bad on dark bg */
+    filter: invert(1) hue-rotate(180deg); /* Basic attempt to make them visible on dark */
+}
+
+/* Ensure labels for inputs are also light colored */
+.form-fields .inputs label,
+.fieldset .title strong,
+.section .title strong,
+.attributes dt label,
+.product-review-box .rating div, /* review stars */
+.estimate-shipping-row-item label,
+.opc .step-title .title,
+.opc .section > label,
+label { /* General label styling */
+    color: #fff; /* White or light gray */
+}
+
+/* Specific NopCommerce components that might need dark theme adjustment */
+.ui-widget-content, /* jQuery UI dialogs/datepickers */
+.ui-datepicker-header {
+    background-color: #2d3748; /* Darker gray */
+    color: #fff;
+    border-color: #4a5568;
+}
+.ui-datepicker .ui-datepicker-title {
+    color: #fff;
+}
+.ui-datepicker .ui-state-default {
+    background: #4a5568;
+    color: #fff;
+    border-color: #2d3748;
+}
+.ui-datepicker .ui-state-hover {
+    background: #2c5282; /* Darker blue */
+    color: #fff;
+}
+.ui-datepicker .ui-state-active {
+    background: #007bff;
+    color: #fff;
+}
+
+/* Bar notifications */
+.bar-notification {
+    color: #fff;
+    opacity: 0.9;
+}
+.bar-notification.success {
+    background-color: #2f855a; /* Dark green */
+}
+.bar-notification.error {
+    background-color: #c53030; /* Dark red */
+}
+.bar-notification.warning {
+    background-color: #dd6b20; /* Dark orange */
+}
+.bar-notification .close {
+    filter: invert(1); /* Make close button white */
+}
+
+/* Flyout cart */
+.flyout-cart {
+    background-color: rgba(30, 41, 59, 0.95); /* Dark, slightly transparent */
+    border: 1px solid #4a5568;
+    color: #ccc;
+}
+.flyout-cart .count a,
+.flyout-cart .name a,
+.flyout-cart .price,
+.flyout-cart .totals strong {
+    color: #fff;
+}
+.flyout-cart .buttons button {
+    /* Reuse button-1 style */
+    padding: 8px 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid white;
+    border-radius: 8px;
+}
+.flyout-cart .buttons button:hover {
+    background-color: rgba(128, 0, 0, 0.6);
+    border-color: rgba(128, 0, 0, 0.8);
+}
+
+/* Product Grid/List item box */
+.product-item .item-box, .product-grid .item-box {
+    background-color: rgba(0,0,0,0.3); /* Semi-transparent background for product boxes */
+    border: 1px solid #444;
+    color: #ccc;
+}
+.product-item .item-box .product-title a, .product-grid .item-box .product-title a {
+    color: #60a5fa; /* Light blue for product titles */
+}
+.product-item .item-box .product-title a:hover, .product-grid .item-box .product-title a:hover {
+    color: #2563eb;
+}
+.product-item .item-box .prices .actual-price, .product-grid .item-box .prices .actual-price {
+    color: #fff; /* White price */
+}
+.product-item .item-box .prices .old-price, .product-grid .item-box .prices .old-price {
+    color: #9ca3af; /* Lighter gray for old price */
+}
+
+/* Remove default NopCommerce widget zones from homepage if a pure iOmniEYE look is desired */
+.iomnieye-home-page .default-nop-zones {
+    display: none;
+}
+
+/* Styling for Product Pages */
+.product-details-page .product-name h1 {
+    color: #fff; /* Ensure product name is light */
+}
+.product-details-page .short-description,
+.product-details-page .full-description {
+    color: #ccc; /* Light text for descriptions */
+}
+.product-details-page .prices .actual-price,
+.product-details-page .product-price span { /* For grouped products price range */
+    color: #fff; /* White price */
+    font-size: 1.5em; /* Larger price */
+}
+.product-details-page .prices .old-price {
+    color: #9ca3af;
+}
+.product-details-page .attributes dt label,
+.product-details-page .giftcard label,
+.product-details-page .rental-attributes label {
+    color: #fff; /* Ensure labels for attributes are light */
+}
+.product-details-page .overview .add-to-cart-button,
+.product-details-page .overview .add-to-wishlist-button {
+    /* Ensure these use the .button-1 style defined earlier */
+    /* Styles might already be covered if they use .button-1 or .button-2 */
+}
+.product-details-page .ui-tabs .ui-widget-header { /* Tabs for description/specs/reviews */
+    background-color: rgba(0,0,0,0.2);
+    border-color: #444;
+}
+.product-details-page .ui-tabs .ui-tabs-nav li a {
+    color: #ccc;
+}
+.product-details-page .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+.product-details-page .product-review-item .review-title,
+.product-details-page .product-review-item .review-text,
+.product-details-page .product-review-item .review-info {
+    color: #ccc;
+}
+
+/* Styling for Category Pages */
+.category-page .page-title h1,
+.manufacturer-page .page-title h1,
+.vendor-page .page-title h1 {
+    color: #fff;
+}
+.category-page .category-description,
+.manufacturer-page .manufacturer-description,
+.vendor-page .vendor-description {
+    color: #ccc;
+}
+.product-filters .filter-title strong { /* Filter section titles */
+    color: #fff;
+}
+.product-filters .filter-item a,
+.product-filters .filter-item label {
+    color: #ccc;
+}
+.product-filters .filter-item a:hover,
+.product-filters .filter-item input[type="checkbox"]:checked + label {
+    color: #60a5fa; /* Light blue for active/hovered filters */
+}
+.pager a, .pager span { /* Paging controls */
+    background-color: rgba(255,255,255,0.1);
+    border-color: #555;
+    color: #ccc;
+}
+.pager .current-page span {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+.pager a:hover {
+    background-color: rgba(255,255,255,0.2);
+    border-color: #777;
+}
+
+/* Styling for Cart & Checkout Pages */
+.order-summary-content .cart-item-row .product-name,
+.order-summary-content .cart-item-row .unit-price,
+.order-summary-content .cart-item-row .quantity,
+.order-summary-content .cart-item-row .subtotal {
+    color: #ccc;
+}
+.order-summary-content .cart-item-row .product-name a {
+    color: #60a5fa;
+}
+.order-summary-content .cart-item-row .product-name a:hover {
+    color: #2563eb;
+}
+.order-summary-content .totals .order-total strong {
+    color: #fff; /* White for order total price */
+}
+.checkout-data .title strong,
+.checkout-data .section .title,
+.opc .step-title .title {
+    color: #fff; /* Titles in checkout steps */
+}
+.opc .step-title {
+    background-color: rgba(0,0,0,0.3);
+    border-color: #444;
+}
+.opc .step-title.active-step .title,
+.opc .step-title.active-step .number {
+     background-color: rgba(128, 0, 0, 0.6); /* Maroon for active step */
+     color: #fff;
+}
+.opc .section.allow .step-title:hover {
+    background-color: rgba(128, 0, 0, 0.4);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background-color: rgba(0,0,0,0.2);
+    border-color: #444;
+}
+.breadcrumb a, .breadcrumb span, .breadcrumb strong {
+    color: #ccc;
+}
+.breadcrumb a:hover {
+    color: #60a5fa;
+}

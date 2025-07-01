@@ -1,0 +1,57 @@
+@using Nop.Services.Localization
+@using Nop.Core
+@inject ILocalizationService localizationService
+@inject IStoreContext storeContext
+@{
+    Layout = "_ColumnsOne"; // Standard NopCommerce layout
+
+    var store = await storeContext.GetCurrentStoreAsync();
+    var storeName = await localizationService.GetLocalizedAsync(store, x => x.Name);
+    ViewData["Title"] = await localizationService.GetLocalizedAsync(store, x => x.HomepageTitle);
+
+    NopHtml.AppendPageCssClassParts("html-home-page iomnieye-home-page"); // Add a theme-specific class
+
+    // Include theme-specific JavaScript for animations
+    NopHtml.AppendScriptParts(ResourceLocation.Footer, "~/Themes/Iomnieye/Content/js/iomnieye.js", appendVersion: true);
+}
+
+<div class="content iomnieye-content-wrapper"> @* Added wrapper for potential theme-specific centering/styling *@
+    <div class="text-center">
+        <h1 class="display-4">@storeName</h1> @* Use NopCommerce store name *@
+
+        <p class="main-text">
+            <span class="changing-text" id="word1"></span> IT <span class="changing-text" id="word2"></span>
+        </p>
+
+        @* NopCommerce Language Selector - to be styled later to look like iomnieye buttons *@
+        @await Component.InvokeAsync("LanguageSelector")
+
+        <div class="tag-cloud">
+            @* These are placeholders. Later, we can try to theme the Nop ProductTagCloudPopular component *@
+            <span data-weight="7">IT Consulting</span>
+            <span data-weight="13">IT Outsource</span>
+            <span data-weight="5">Web Development & App Development</span>
+            <span data-weight="4">IP Telephony</span>
+            <span data-weight="6">СКС Видео Наблюдение</span>
+            <span data-weight="9">Network & Servers</span>
+            <span data-weight="4">Optimization System</span>
+        </div>
+    </div>
+</div>
+
+@* Standard NopCommerce homepage widget zones - can be hidden with CSS if not desired for iomnieye look *@
+<div class="page-body default-nop-zones">
+    @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageTop })
+    @await Component.InvokeAsync(typeof(TopicBlockViewComponent), new { systemName = "HomepageText" })
+    @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageBeforeCategories })
+    @await Component.InvokeAsync(typeof(HomepageCategoriesViewComponent))
+    @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageBeforeProducts })
+    @await Component.InvokeAsync(typeof(HomepageProductsViewComponent))
+    @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageBeforeBestSellers })
+    @await Component.InvokeAsync(typeof(HomepageBestSellersViewComponent))
+    @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageBeforeNews })
+    @await Component.InvokeAsync(typeof(HomepageNewsViewComponent))
+    @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageBeforePoll })
+    @await Component.InvokeAsync(typeof(HomepagePollsViewComponent))
+    @await Component.InvokeAsync(typeof(WidgetViewComponent), new { widgetZone = PublicWidgetZones.HomepageBottom })
+</div>
