@@ -639,7 +639,25 @@ label {
 
 /* Body text color */
 body {
+    /* background-image: url('../images/baner3.jpg') !important; REMOVED - Replaced by video */
+    /* background-size: cover !important; REMOVED */
+    /* background-attachment: fixed !important; REMOVED */
+    /* overflow: hidden !important;  REMOVED - May need to be re-evaluated based on video behavior */
+    /* background-position: center center !important; REMOVED */
+    margin-bottom: 60px; /* Kept from original */
     color: #ccc !important; /* Default light grey for text on dark background - ensure override */
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100; /* Ensure it's behind everything */
+    object-fit: cover; /* Cover the area, cropping if necessary */
 }
 
 h1, h2, h3, h4, h5, h6 {
