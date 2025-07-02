@@ -637,6 +637,14 @@ label {
 
 /* General Element Styling for iOmniEYETheme */
 
+/* Ensure page content is above the video background */
+.master-wrapper-page {
+    position: relative; /* Or absolute, depending on desired scroll behavior with fixed video */
+    z-index: 1; /* Higher than the video's z-index */
+    /* background-color: rgba(0,0,0,0.3); /* Optional: a slight overlay for all content, can be adjusted or removed */
+}
+
+/* Re-evaluate body overflow if needed */
 /* Body text color */
 body {
     /* background-image: url('../images/baner3.jpg') !important; REMOVED - Replaced by video */
