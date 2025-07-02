@@ -19,11 +19,11 @@ html {
 
 body {
     margin-bottom: 60px;
-    background-image: url('../images/baner3.jpg'); /* Adjusted path */
-    background-size: cover;
-    background-attachment: fixed;
-    overflow: hidden;
-    background-position: center center;
+    background-image: url('../images/baner3.jpg') !important; /* Adjusted path AND ADDED !important */
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    overflow: hidden !important;
+    background-position: center center !important;
 }
 
 .social-links a {
@@ -475,4 +475,288 @@ label {
         /* left: -80px; already defined */
     }
 }
+
+/* Header Styles */
+.header {
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+    padding: 10px 0;
+    color: white; /* Default text color for header items */
+}
+
+.header-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+}
+
+.header-logo img {
+    max-height: 50px; /* Adjust as needed */
+}
+
+.header-links-wrapper a,
+.header-selectors-wrapper select, /* Style dropdowns if any */
+.header-selectors-wrapper .option { /* Style custom dropdowns if any */
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.header-links-wrapper a:hover,
+.header-selectors-wrapper select:hover,
+.header-selectors-wrapper .option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #007bff; /* Blue accent on hover for links */
+}
+
+.header-menu {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker for main menu */
+    padding: 10px 0;
+}
+
+.top-menu > li > a { /* Targeting NopCommerce top menu links */
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.top-menu > li > a:hover {
+    color: #007bff; /* Blue accent */
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.search-box .search-box-button { /* Style search button if needed */
+    background-color: rgba(128, 0, 0, 0.6); /* Maroon accent */
+    border-color: rgba(128, 0, 0, 0.6);
+    color: white;
+}
+.search-box .search-box-button:hover {
+    background-color: rgba(100, 0, 0, 0.8);
+    border-color: rgba(100, 0, 0, 0.8);
+}
+
+/* Ensure dropdowns in header (currency, language) are styled for dark theme */
+.header-selectors-wrapper .selectric .label {
+    color: white;
+}
+.header-selectors-wrapper .selectric-items li {
+    color: #333; /* Dark text on light dropdown background */
+}
+.header-selectors-wrapper .selectric-items li:hover {
+    background-color: #eee;
+}
+
 /* Additional NopCommerce specific overrides might be needed below */
+
+/* Footer Styles */
+.footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark, slightly more opaque than header */
+    color: #ccc; /* Lighter grey for footer text */
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.footer-upper {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.footer-block {
+    flex-basis: 22%; /* Roughly four columns */
+    margin-bottom: 20px; /* Space for wrapped items */
+}
+
+.footer-block .title strong {
+    color: white;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.footer-block .list li a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 3px 0;
+    display: block;
+}
+
+.footer-block .list li a:hover {
+    color: #007bff; /* Blue accent for links */
+}
+
+.footer-lower {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 0.85em;
+    color: #aaa; /* Slightly dimmer text for copyright, etc. */
+}
+
+.footer-lower a {
+    color: #ccc;
+}
+
+.footer-lower a:hover {
+    color: #007bff;
+}
+
+/* Social buttons in footer - assuming they might be styled by .social-links from earlier */
+.footer-block.follow-us .social-links a {
+    color: white; /* Ensure icons are white if not already */
+}
+.footer-block.follow-us .social-links a:hover svg path {
+    fill: #007bff; /* Blue hover for social icons */
+}
+
+/* Newsletter box in footer */
+.footer-block .newsletter-subscribe-button {
+    background-color: rgba(128, 0, 0, 0.6); /* Maroon accent */
+    border-color: rgba(128, 0, 0, 0.6);
+    color: white;
+}
+.footer-block .newsletter-subscribe-button:hover {
+    background-color: rgba(100, 0, 0, 0.8);
+    border-color: rgba(100, 0, 0, 0.8);
+}
+.footer-block .newsletter-email input[type="email"] {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+.footer-block .newsletter-email input[type="email"]::placeholder {
+    color: #bbb;
+}
+
+/* General Element Styling for iOmniEYETheme */
+
+/* Body text color */
+body {
+    color: #ccc !important; /* Default light grey for text on dark background - ensure override */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white !important; /* White headings - ensure override */
+}
+
+a {
+    color: #87cefa !important; /* Light Sky Blue for links - can be adjusted */
+}
+a:hover {
+    color: #add8e6 !important; /* Lighter blue on hover */
+}
+
+/* Buttons */
+.button-1,
+.button-2,
+input[type="submit"],
+input[type="button"],
+button {
+    background-color: rgba(128, 0, 0, 0.7) !important; /* Maroon accent - using !important to override defaults initially */
+    color: white !important;
+    border: 1px solid rgba(100, 0, 0, 0.9) !important;
+    padding: 8px 15px !important;
+    border-radius: 4px !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.button-1:hover,
+.button-2:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+    background-color: rgba(100, 0, 0, 0.9) !important;
+    border-color: rgba(80, 0, 0, 1) !important;
+}
+
+/* Forms - general inputs not covered by .form-control from original CSS */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="number"],
+textarea,
+select {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 8px !important;
+    border-radius: 4px !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #007bff !important; /* Blue accent on focus */
+    box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25) !important;
+}
+
+select {
+    /* May need more specific styling for select dropdown arrows on dark theme */
+}
+
+/* Product Boxes (General Idea - specific classes will vary) */
+.product-item, .product-grid .item-box {
+    background-color: rgba(0, 0, 0, 0.2) !important; /* Slight overlay for product boxes */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 15px !important;
+    margin-bottom: 20px !important;
+    border-radius: 4px !important;
+}
+
+.product-item .product-title a {
+    color: white !important;
+    font-weight: bold !important;
+}
+.product-item .product-title a:hover {
+    color: #007bff !important;
+}
+
+.product-item .prices .actual-price {
+    color: #87cefa !important; /* Light blue for price */
+    font-weight: bold !important;
+    font-size: 1.2em !important;
+}
+
+/* Tables */
+.table-wrapper table {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    color: #ccc !important;
+}
+.table-wrapper th {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    color: white !important;
+}
+.table-wrapper td, .table-wrapper th {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Pager */
+.pager a, .pager span {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    background-color: rgba(0,0,0,0.2) !important;
+}
+.pager .current-page span {
+    background-color: rgba(128, 0, 0, 0.6) !important;
+    border-color: rgba(100, 0, 0, 0.8) !important;
+}
+.pager a:hover {
+    background-color: rgba(128, 0, 0, 0.4) !important;
+    border-color: rgba(100, 0, 0, 0.6) !important;
+}
