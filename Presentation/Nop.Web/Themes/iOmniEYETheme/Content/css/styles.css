@@ -478,87 +478,115 @@ label {
 
 /* Header Styles */
 .header {
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
-    padding: 10px 0;
-    color: white; /* Default text color for header items */
-    position: relative; /* Ensure it's part of the stacking context */
-    z-index: 10; /* Above video, below potential modals */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background for the entire header area */
+    /* padding: 10px 0; */ /* Let NopCommerce handle padding */
+    color: white;
+    position: relative;
+    z-index: 10;
 }
 
 .header-upper {
-    /* display: flex; */ /* REMOVED - Let NopCommerce default CSS handle layout */
-    /* justify-content: space-between; */ /* REMOVED */
-    /* align-items: center; */ /* REMOVED */
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+    padding-bottom: 10px; /* Keep this if desired */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Keep this if desired */
+    /* Removed all flex/layout overrides */
 }
 
-/* Ensuring child elements of header-upper and header-lower flow as NopCommerce intends, but with themed text */
+.header-lower {
+    /* Removed all flex/layout overrides */
+}
+
+.header-logo {
+    /* NopCommerce positions this. */
+}
+.header-logo img {
+    max-height: 50px; /* Example, can be adjusted */
+}
+
+/* More specific targeting for text elements within header sections */
 .header-selectors-wrapper,
 .header-links-wrapper,
-.header-logo,
-.search-box {
-    /* Minimal style here to avoid disrupting NopCommerce's layout - mostly color overrides if needed */
+.header-links-wrapper span, /* For "Welcome" message, etc. */
+.header-links-wrapper li,
+.header-links-wrapper .account { /* Common class for account link */
+    color: white !important; /* Try with !important first for testing */
 }
 
-.header-logo img {
-    max-height: 50px; /* Adjust as needed */
-}
-
-.header-links-wrapper a,
-.header-selectors-wrapper select, /* Style dropdowns if any */
-.header-selectors-wrapper .option { /* Style custom dropdowns if any */
-    color: white;
+.header-links-wrapper a {
+    color: #87cefa !important; /* Link color from general styles */
     text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
 }
 
-.header-links-wrapper a:hover,
-.header-selectors-wrapper select:hover,
-.header-selectors-wrapper .option:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #007bff; /* Blue accent on hover for links */
+.header-links-wrapper a:hover {
+    color: #add8e6 !important; /* Lighter blue on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover background */
+}
+
+/* Language and Currency Dropdowns - more robust styling */
+.header .language-selector > select,
+.header .currency-selector > select,
+.header .tax-display-type-selector > select {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* For themes using Selectric for dropdowns (DefaultClean does) */
+.header-selectors-wrapper .selectric .label {
+    color: white !important;
+}
+.header-selectors-wrapper .selectric-wrapper {
+    background-color: rgba(0, 0, 0, 0.2) !important; /* Background for the selectric dropdown itself */
+    border: 1px solid rgba(255,255,255,0.2) !important;
+}
+.header-selectors-wrapper .selectric-items {
+    background-color: #222 !important; /* Dark background for dropdown items */
+    border-color: #444 !important;
+}
+.header-selectors-wrapper .selectric-items li {
+    color: #ccc !important; /* Light text for dropdown items */
+}
+.header-selectors-wrapper .selectric-items li:hover,
+.header-selectors-wrapper .selectric-items li.selected {
+    background-color: #007bff !important; /* Blue for selected/hover item */
+    color: white !important;
+}
+
+
+.search-box {
+    /* NopCommerce positions this. Style input and button. */
+}
+.search-box .search-text, /* NopCommerce class for search input */
+.search-box input[type="text"] { /* More general for other search box implementations */
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.search-box .search-box-button {
+    background-color: rgba(128, 0, 0, 0.7) !important;
+    border-color: rgba(100, 0, 0, 0.9) !important;
+    color: white !important;
+}
+.search-box .search-box-button:hover {
+    background-color: rgba(100, 0, 0, 0.9) !important;
+    border-color: rgba(80, 0, 0, 1) !important;
 }
 
 .header-menu {
-    background-color: rgba(0, 0, 0, 0.5); /* Darker for main menu */
-    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Darker for main menu bar */
+    /* padding: 10px 0; */ /* Let NopCommerce handle padding */
 }
 
-.top-menu > li > a { /* Targeting NopCommerce top menu links */
-    color: white;
-    font-weight: bold;
-    padding: 10px 15px;
-    text-transform: uppercase;
+.top-menu > li > a {
+    color: white !important;
+    font-weight: bold; /* Keep if desired, or let Nop default */
+    text-transform: uppercase; /* Keep if desired */
+    /* padding: 10px 15px; */ /* Let NopCommerce handle padding for layout */
     font-size: 1em;
 }
 
 .top-menu > li > a:hover {
-    color: #007bff; /* Blue accent */
-    background-color: rgba(255, 255, 255, 0.05);
-}
-
-.search-box .search-box-button { /* Style search button if needed */
-    background-color: rgba(128, 0, 0, 0.6); /* Maroon accent */
-    border-color: rgba(128, 0, 0, 0.6);
-    color: white;
-}
-.search-box .search-box-button:hover {
-    background-color: rgba(100, 0, 0, 0.8);
-    border-color: rgba(100, 0, 0, 0.8);
-}
-
-/* Ensure dropdowns in header (currency, language) are styled for dark theme */
-.header-selectors-wrapper .selectric .label {
-    color: white;
-}
-.header-selectors-wrapper .selectric-items li {
-    color: #333; /* Dark text on light dropdown background */
-}
-.header-selectors-wrapper .selectric-items li:hover {
-    background-color: #eee;
+    color: #007bff !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
 /* Additional NopCommerce specific overrides might be needed below */
