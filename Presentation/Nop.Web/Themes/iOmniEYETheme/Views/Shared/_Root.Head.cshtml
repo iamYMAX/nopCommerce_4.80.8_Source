@@ -46,7 +46,7 @@
     var keywords = await NopHtml.GenerateMetaKeywordsAsync();
 
     // Add theme specific CSS
-    NopHtml.AppendCssFileParts(ResourceLocation.Head, "~/Themes/iOmniEYETheme/Content/css/styles.css");
+    NopHtml.AppendCssFileParts("Head", "~/Themes/iOmniEYETheme/Content/css/styles.css");
 }
 <!DOCTYPE html>
 <html lang="@CultureInfo.CurrentUICulture.TwoLetterISOLanguageName" dir="@Html.GetUIDirection(!await Html.ShouldUseRtlThemeAsync())" class="@NopHtml.GeneratePageCssClasses()">
