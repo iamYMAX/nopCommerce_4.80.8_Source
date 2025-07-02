@@ -481,14 +481,24 @@ label {
     background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
     padding: 10px 0;
     color: white; /* Default text color for header items */
+    position: relative; /* Ensure it's part of the stacking context */
+    z-index: 10; /* Above video, below potential modals */
 }
 
 .header-upper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* display: flex; */ /* REMOVED - Let NopCommerce default CSS handle layout */
+    /* justify-content: space-between; */ /* REMOVED */
+    /* align-items: center; */ /* REMOVED */
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+}
+
+/* Ensuring child elements of header-upper and header-lower flow as NopCommerce intends, but with themed text */
+.header-selectors-wrapper,
+.header-links-wrapper,
+.header-logo,
+.search-box {
+    /* Minimal style here to avoid disrupting NopCommerce's layout - mostly color overrides if needed */
 }
 
 .header-logo img {
@@ -653,7 +663,7 @@ body {
     /* overflow: hidden !important;  REMOVED - May need to be re-evaluated based on video behavior */
     /* background-position: center center !important; REMOVED */
     margin-bottom: 60px; /* Kept from original */
-    color: #ccc !important; /* Default light grey for text on dark background - ensure override */
+    color: #ccc; /* Default light grey for text on dark background */
 }
 
 #background-video {
@@ -669,14 +679,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: white !important; /* White headings - ensure override */
+    color: white; /* White headings */
 }
 
 a {
-    color: #87cefa !important; /* Light Sky Blue for links - can be adjusted */
+    color: #87cefa; /* Light Sky Blue for links - can be adjusted */
 }
 a:hover {
-    color: #add8e6 !important; /* Lighter blue on hover */
+    color: #add8e6; /* Lighter blue on hover */
 }
 
 /* Buttons */
